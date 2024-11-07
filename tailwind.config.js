@@ -16,8 +16,9 @@ export default {
       cor7: '#FFC8C3',
       cor8: '#D1E4F3',
       cor9: '#D9D9D9',
-      white: '#FFFF',
-      black: '#0000'
+      white: '#fff',
+      black: '#000',
+      gray: '#eeeeee'
     },
   },
   plugins: [],

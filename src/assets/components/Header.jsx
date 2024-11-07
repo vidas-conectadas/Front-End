@@ -7,7 +7,7 @@ function Header() {
         <div className='bg-gradient-to-b from-cor2 to-cor4 h-16 flex items-center justify-between gap-5 pl-2 pr-2'>
             <img src={logo} className='size-16 sm:w-16 md:w-20' alt="" />
             <nav className='text-cor9 font-semibold text-xl flex gap-10 '>
-                <a href="#">Onde doar</a>
+                <a href="/Register">Onde doar</a>
                 <a href="#">Duvidas Frequentes</a>
                 <a href="#">Requisitos</a>
             </nav>

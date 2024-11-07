@@ -1,8 +1,17 @@
 import React from 'react'
+import Header from '../components/Header'
+import HistoricoDoacoes from '../components/TableHistory'
+import Footer from '../components/Footer'
 
 const Register = () => {
   return (
-    <div className='text-8xl'>Register</div>
+    <div>
+
+    <Header/>
+    <HistoricoDoacoes/>
+    <Footer />
+    
+    </div>
   )
 }
 
