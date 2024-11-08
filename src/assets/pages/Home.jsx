@@ -1,6 +1,5 @@
 import React from 'react'
 import Header from '../components/Header'
-import image2maior from '../images/image2maior.png'
 import Title from '../components/Title'
 import Footer from '../components/Footer'
 import imagem_requisitos from '../images/image 7.jpg'
@@ -9,13 +8,26 @@ import { FaShieldHeart } from "react-icons/fa6";
 import group13 from '../images/Group 13.jpg'
 import Input from '../components/Input'
 import imagem from '../images/image 2.jpg'
+import Beneficios from '../images/Beneficios.jpg'
+
+// import { useState } from 'react'
 
 
-// IMPORTAR IMAGEM PARA BENEFICIOS
+// const [cep, setCep] = useState('')
+// const [bairro, setBairro] = useState('')
+// const [rua, setRua] = useState('')
+
+// const buscar = (e) => {
+//     e.preventDefault();
+
+//     console.log('Nome:', nome)
+//     console.log("Imagem", imagem)
+//     console.log("Data de nascimento", dataNascimento)
+
 
 function Home() {
     return (
-        <div className=' '>
+        <div className=''>
             <Header />
             <picture>
                 <img src={imagem} className='' alt="" />
@@ -29,25 +41,39 @@ function Home() {
             </div>
 
 
-            <div>
+            <div className='pb-12'>
                 <picture>
                     <img src={group13} alt="" />
                 </picture>
             </div>
 
+
             <div className='flex justify-center'>
-                <div className='bg-cor7 w-7/12 flex flex-col items-center rounded-lg gap-4'>
+                <div className='bg-cor7 w-10/12 h-lvh flex flex-col items-center rounded-lg gap-7 pt-6 pb-6'>
                     <h2 className='text-cor1 font-bold'>Digite seu CEP e decubra o local mais próximo para doação</h2>
-                    <Input />
-                    <div className='flex gap-14'>
-                        <Input label='Endereço' />
-                        <Input label='Bairro' />
-                    </div>
+                    <form id="form-cep" className='flex flex-col h-full w-8/12 justify-center gap-5' >
+                        <div className='flex justify-center'>
+                            <Input type="text" id="cep" name="cep" required />
+                        </div>
+                        <div className='flex justify-center gap-14'>
+                            <Input label='Endereço' type="text" id="rua" name="rua" required />
+                            <Input label='Bairro' type="text" id="bairro" name="bairro" required />
+                        </div>
+                        <div id="map" className='h-full'>
+                            <iframe
+                                className=' h-full w-full '
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235237.00827445462!2d-47.232708568744556!3d-22.892032932237974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8c61de74b6325%3A0x17e53a6a2178c22a!2sCampinas%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1727625572465!5m2!1spt-BR!2sbr"
+                                allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+
+                    </form>
                 </div>
             </div>
 
 
-            <div className='flex flex-col items-center gap-10'>
+
+            <div className='flex flex-col items-center gap-10 pt-12'>
                 <Title h1='REQUISITOS BÁSICOS PARA DOAR' />
                 <div className='flex justify-around '>
                     <img src={imagem_requisitos} alt="" />
@@ -80,16 +106,17 @@ function Home() {
                 </div>
             </div>
 
+            <div className='flex flex-col items-center gap-12 pt-12'>
+                <Title h1='BENEFÍCIOS'></Title>
+                <picture>
+                    <img src={Beneficios} alt="" />
+                </picture>
+            </div>
 
-<div className='flex flex-col items-center'>
-    <Title h1='BENEFÍCIOS'></Title>
-</div>
 
- {/* IMPORTAR IMAGEM PARA BENEFICIOS */}
-
-            <div className='flex flex-col items-center mr-3 ml-3 gap-10'>
+            <div className='flex flex-col items-center mr-3 ml-3 gap-10 pt-12'>
                 <Title h1='DÚVIDAS FREQUENTES'></Title>
-                <div className=''>
+                <div className='pb-5'>
                     <br />
                     <h3 className='font-semibold'>Quem tem tatuagem pode doar sangue?</h3>
                     <p>Sim, desde que tenha feito a tatuagem há mais de um ano.</p>
@@ -113,8 +140,10 @@ function Home() {
                         Para quem fuma maconha: Se for a única droga consumida, a doação de sangue é permitida desde que o candidato
                         não esteja sob o efeito da mesma. O uso de maconha impede a doação por 12 (doze) horas.</p>
                     <br />
-                    <p className='font-semibold'>Para mais informações, acesse o link.</p>
-                    <p >https://www.hemocentro.fmrp.usp.br/canal-do-doador/duvidas-e-perguntas/</p>
+
+                    <a href="https://www.hemocentro.fmrp.usp.br/canal-do-doador/duvidas-e-perguntas/">
+                        <p className='font-semibold'>Clique aqui para mais informações.</p>
+                    </a>
 
                 </div>
             </div>
@@ -124,4 +153,4 @@ function Home() {
     )
 }
 
-export default Home
+export default Home 

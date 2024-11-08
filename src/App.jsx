@@ -1,9 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
-import Register from './assets/pages/Register'
+import History from './assets/pages/History'
 import Home from './assets/pages/Home'
-import Tabela from './assets/pages/Tabela'
-
 
 
 function App() {
@@ -11,8 +9,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Home />}></Route>
-        <Route path='/tabela' element={<Tabela />}></Route>
+        <Route path='/' element={<Home/>}></Route>
+        <Route path='/History' element={<History/>}></Route>
       </Routes>
     </BrowserRouter>
   )
