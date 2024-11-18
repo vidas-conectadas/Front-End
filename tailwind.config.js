@@ -20,6 +20,24 @@ export default {
       black: '#000',
       gray: '#eeeeee'
     },
+
+    screens: {
+      's': '320px',
+      'm': '375px',
+      'l': '425px',
+      'tablet': '768px',
+      'laptop': '1024px',
+      'laptopL': '1440px',
+
+      
+      // => @media (min-width: 600px) { ... }
+    },
+
+    
+
+    backgroundImage: {
+      'Vermelho':"url('C:/Users/vai2ca/Desktop/vidas conectadas/src/assets/images/imgBeneficios.jpg')"
+    },
   },
   plugins: [],
 }

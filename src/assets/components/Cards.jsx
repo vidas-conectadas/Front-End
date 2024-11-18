@@ -9,25 +9,20 @@ function Cards({ rosa, azul, titulo, texto, icone }) {
 
 
   return (
-    <div className='border-2 border-cor9 h-96 w-72 flex flex-col items-center justify-center  gap-5 rounded-lg'>
-      <div className={`w-20 h-20 ${cores} flex items-center justify-center rounded-lg text-5xl`}>
+    <div className='     border-2 border-cor9 w-48 h-72 gap-2 flex flex-col items-center justify-center rounded-lg laptop:w-64  laptopL:w-72 laptopL:h-96'>
+      <div className={`w-12 h- ${cores} flex items-center justify-center rounded-lg text-2xl laptop:text-3xl`}>
         {icone}
       </div>
       <div className=''>
-        <p className='font-bold text-xl'>{titulo}</p>
+        <p className='font-bold text-base laptop:text-lg laptopL:text-2xl'>{titulo}</p>
       </div>
       <div className='ml-2 mr-2 font-semibold'>
-        <p className='text-center'>{texto}</p>
+        <p className='text-center text-sm laptop:text-base laptopL:text-xl'>{texto}</p>
       </div>
     </div>
   )
 }
 
 export default Cards
-
-
-
-
-
 
 
