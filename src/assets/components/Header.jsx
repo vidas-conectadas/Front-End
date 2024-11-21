@@ -6,6 +6,7 @@ import logout from '../images/icon-logout.png';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
+
 function Header() {
     const [userName, setUserName] = useState('');
     const navigate = useNavigate();
@@ -59,8 +60,8 @@ function Header() {
                     </>
                 ) : (
                     <Link to='/Login' className=' flex flex-col items-center'>
-                        <img src={user} alt="Ícone de usuário" className='size-6' />
-                        <span className="text-black font-semibold">Login</span>
+                        <FaUser size='30' className='text-white'/>
+                        <span className="text-white font-semibold">Login</span>
                     </Link>
                     
                 )}

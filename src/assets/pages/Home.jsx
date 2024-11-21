@@ -14,6 +14,10 @@ import concurso from '../images/concurso.jpg'
 import fila from '../images/fila.jpg'
 import Mapa from '../components/Mapa'
 import Locais from '../components/Locais'
+import { FaHeartCircleCheck } from "react-icons/fa6";
+import { PiListChecksFill } from "react-icons/pi";
+import { FaHeartCirclePlus } from "react-icons/fa6";
+import { FaHandshake } from "react-icons/fa6";
 
 
 function Home() {
@@ -26,10 +30,10 @@ function Home() {
 
 
             <div className='flex flex-wrap justify-center gap-3 pt-10 pb-10'>
-                <Cards titulo={'Incetivar outros a doar'} icone={<FaShieldHeart />} rosa='rosa' texto={'Sua ação pode inspirar amigos, familiares e colegas a também se tornarem doadores, ampliando o impacto positivo e aumentando a quantidade de sangue disponível para quem precisa.'}></Cards>
-                <Cards titulo={'Salvar vidas'} icone={<FaShieldHeart />} azul='azul' texto={'O processo de doação é relativamente rápido e seguro. Os riscos são mínimos, e as agências de coleta seguem rigorosos protocolos de segurança e higiene.'}></Cards>
-                <Cards titulo={'Incetivar outros a doar'} icone={<FaShieldHeart />} rosa='rosa' texto={'Sua ação pode inspirar amigos, familiares e colegas a também se tornarem doadores, ampliando o impacto positivo e aumentando a quantidade de sangue disponível para quem precisa.'}></Cards>
-                <Cards titulo={'Testar a saúde'} icone={<FaShieldHeart />} azul='azul' texto={'Antes de doar sangue, você passa por uma triagem que inclui testes de saúde básicos. Isso pode ser uma forma de monitorar a sua própria saúde e identificar problemas potenciais.'}></Cards>
+                <Cards titulo={'Simples e Seguro'} icone={<FaHeartCircleCheck />} rosa='rosa' texto={'O processo de doação é relativamente rápido e seguro. Os riscos são mínimos, e as agências de coleta seguem rigorosos protocolos de segurança e higiene.'}></Cards>
+                <Cards titulo={'Salvar vidas'} icone={<FaHeartCirclePlus />} azul='azul' texto={'O motivo mais direto e importante é que a doação de sangue pode salvar vidas. Pacientes com condições como câncer, anemia, ou aqueles que sofrem de acidentes graves frequentemente necessitam de transfusões de sangue.'}></Cards>
+                <Cards titulo={'Incetivar outros a doar'} icone={<FaHandshake />} rosa='rosa' texto={'Sua ação pode inspirar amigos, familiares e colegas a também se tornarem doadores, ampliando o impacto positivo e aumentando a quantidade de sangue disponível para quem precisa.'}></Cards>
+                <Cards titulo={'Testar a saúde'} icone={<PiListChecksFill />} azul='azul' texto={'Antes de doar sangue, você passa por uma triagem que inclui testes de saúde básicos. Isso pode ser uma forma de monitorar a sua própria saúde e identificar problemas potenciais.'}></Cards>
             </div>
             <Locais/>
 
