@@ -13,6 +13,7 @@ import carteira from '../images/carteira-trabalho.jpg'
 import concurso from '../images/concurso.jpg'
 import fila from '../images/fila.jpg'
 import Mapa from '../components/Mapa'
+import Locais from '../components/Locais'
 
 
 function Home() {
@@ -30,16 +31,18 @@ function Home() {
                 <Cards titulo={'Incetivar outros a doar'} icone={<FaShieldHeart />} rosa='rosa' texto={'Sua ação pode inspirar amigos, familiares e colegas a também se tornarem doadores, ampliando o impacto positivo e aumentando a quantidade de sangue disponível para quem precisa.'}></Cards>
                 <Cards titulo={'Testar a saúde'} icone={<FaShieldHeart />} azul='azul' texto={'Antes de doar sangue, você passa por uma triagem que inclui testes de saúde básicos. Isso pode ser uma forma de monitorar a sua própria saúde e identificar problemas potenciais.'}></Cards>
             </div>
+            <Locais/>
 
 
-            <div className='pb-10'>
+            {/* <div className='pb-10'>
                 <img src={group13} alt="" className='' />
-            </div>
+            </div> */}
 
 
 
-            <Mapa/>
-        
+            {/* <Mapa/> */}
+                    
+                        
 
 
 
@@ -73,7 +76,7 @@ function Home() {
 
 
             <div className='flex flex-col gap-10 pt-12 pb-10 '>
-                <div className='flex text-center tablet:justify-center '>
+                <div id='requisitos' className='flex text-center tablet:justify-center '>
                     <Title h1='REQUISITOS BÁSICOS PARA DOAR' />
                 </div>
 
@@ -102,7 +105,7 @@ function Home() {
                             <li className='list-disc'>
                                 Estar alimentado. Evitar alimentos gordurosos nas 3 horas que antecedem a doação de sangue. Caso seja após o almoço, aguardar 2 horas.
                             </li>
-                            <li>
+                            <li id='beneficios'>
                                 Para mais informações, ligue (19) 3272-5501 - Hemocentro Mário Gatti
                             </li>
                         </ul>
@@ -136,7 +139,7 @@ function Home() {
             </div>
 
 
-            <div className='flex flex-col items-center mr-3 ml-3 gap-5 pt-12'>
+            <div id='duvidas' className='flex flex-col items-center mr-3 ml-3 gap-5 pt-12'>
                 <div className='text-center'>
                     <Title h1='DÚVIDAS FREQUENTES'></Title>
                 </div>

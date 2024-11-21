@@ -1,0 +1,38 @@
+[
+    {
+      "nome": "Hemocentro de Campinas",
+      "endereco": "Rua Vital Brasil, 2, Cidade Universitária",
+      "cep": "13083-970",
+      "latitude": -23.1895,
+      "longitude": -47.0561
+    },
+    {
+      "nome": "Hospital de Câncer de Barretos - Campinas",
+      "endereco": "Rua Tiradentes, 215, Centro",
+      "cep": "13010-322",
+      "latitude": -23.1915,
+      "longitude": -47.0915
+    },
+    {
+      "nome": "Posto de Coleta de Sangue - Campinas Shopping",
+      "endereco": "Avenida Irmãos Bueno, 2200, Jardim do Trevo",
+      "cep": "13060-100",
+      "latitude": -23.1965,
+      "longitude": -47.0733
+    },
+    {
+      "nome": "Hospital PUC Campinas",
+      "endereco": "Rua Alice Toledo, 1141, Vila Pompéia",
+      "cep": "13034-420",
+      "latitude": -23.1922,
+      "longitude": -47.8402
+    },
+    {
+      "nome": "Hospital de Câncer de Campinas",
+      "endereco": "Avenida Moraes Salles, 300, Ponte Preta",
+      "cep": "13026-100",
+      "latitude": -23.1811,
+      "longitude": -47.8993
+    }
+  ]
+  
