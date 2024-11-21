@@ -54,7 +54,7 @@ Safari
 - [@Daniel Corte](https://www.github.com/danielcorte)
 - [@Eduarda Puertas](https://www.github.com/eepuertas)
 
-##🤝 Contribuindo
+## 🤝 Contribuindo
 Contribuições são sempre bem-vindas! 😊
 
 Faça um fork do repositório.
