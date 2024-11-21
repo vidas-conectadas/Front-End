@@ -8,7 +8,7 @@ O Vidas Conectadas é um projeto universitário desenvolvido para conscientizar 
 ✔️ Informações detalhadas e incentivos sobre doação de sangue.
 ✔️ Sistema de cadastro e login para gerenciamento do histórico de doações.
 ✔️ Visualização do banco de sangue, incluindo tipos em falta.
-✔️ Localização de pontos de doação mais próximos via consulta por CEP.
+✔️ Localização de pontos de doação mais próximos via consulta por cidade.
 
 ## 🛠️ Stack Utilizada
 Front-end: HTML, CSS
@@ -33,7 +33,7 @@ Abra o projeto no navegador acessando:
 ```http://localhost:3000```  
 
 ## 🔗 Links
-Protótipo no Figma: Clique aqui para acessar
+Protótipo no Figma: [Clique aqui para acessar](https://www.figma.com/design/qRzE2McRgOmteCovMif7bc/Figma---Vidas-Conectadas?node-id=0-1&t=gMKTNpkAgZiTFzwp-1)
 
 ## ❓ FAQ
 1. Para quem este projeto é direcionado?
@@ -48,10 +48,11 @@ Microsoft Edge
 Safari
 
 ## 👩‍💻 Autores
-@Nicole Siqueira
-@Allana Vieira
-@Daniel Corte
-@Eduarda Puertas
+
+- [@Nicole Siqueira](https://www.github.com/nisiq)
+- [@Allana Vieira](https://www.github.com/AVITORIAC)
+- [@Daniel Corte](https://www.github.com/danielcorte)
+- [@Eduarda Puertas](https://www.github.com/eepuertas)
 
 ##🤝 Contribuindo
 Contribuições são sempre bem-vindas! 😊
