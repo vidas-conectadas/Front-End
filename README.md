@@ -48,10 +48,10 @@ Microsoft Edge
 Safari
 
 ## 👩‍💻 Autores
-Nicole Siqueira
-Allana Vieira
-Daniel Corte
-Eduarda Puertas
+@Nicole Siqueira
+@Allana Vieira
+@Daniel Corte
+@Eduarda Puertas
 
 ##🤝 Contribuindo
 Contribuições são sempre bem-vindas! 😊
