@@ -5,10 +5,10 @@ Conectando vidas através da doação de sangue.
 O Vidas Conectadas é um projeto universitário desenvolvido para conscientizar e facilitar o processo de doação de sangue. A plataforma oferece informações educativas, serviços personalizados e recursos para engajar a comunidade de forma prática e acessível.
 
 ## 🚀 Funcionalidades
-✔️ Informações detalhadas e incentivos sobre doação de sangue.
-✔️ Sistema de cadastro e login para gerenciamento do histórico de doações.
-✔️ Visualização do banco de sangue, incluindo tipos em falta.
-✔️ Localização de pontos de doação mais próximos via consulta por cidade.
+✔️ Informações detalhadas e incentivos sobre doação de sangue.<br/>
+✔️ Sistema de cadastro e login para gerenciamento do histórico de doações.<br/>
+✔️ Visualização do banco de sangue, incluindo tipos em falta.<br/>
+✔️ Localização de pontos de doação mais próximos via consulta por cidade.<br/>
 
 ## 🛠️ Stack Utilizada
 Front-end: HTML, CSS
