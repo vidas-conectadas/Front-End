@@ -16,31 +16,21 @@ Back-end: Node.js
 Banco de Dados: MySQL
 
 ##🖥️ Como Rodar o Projeto
+
 Clone o repositório:
+```git clone https://github.com/seu-usuario/vidas-conectadas.git```
 
-bash
-Copiar código
-git clone https://github.com/seu-usuario/vidas-conectadas.git  
 Navegue para o diretório do projeto:
+```cd vidas-conectadas```  
 
-bash
-Copiar código
-cd vidas-conectadas  
 Instale as dependências:
+```npm install```
 
-bash
-Copiar código
-npm install  
 Inicie o servidor de desenvolvimento:
+```npm run dev```  
 
-bash
-Copiar código
-npm run dev  
 Abra o projeto no navegador acessando:
-
-arduino
-Copiar código
-http://localhost:3000  
+```http://localhost:3000```  
 
 ## 🔗 Links
 Protótipo no Figma: Clique aqui para acessar
@@ -69,18 +59,11 @@ Contribuições são sempre bem-vindas! 😊
 Faça um fork do repositório.
 
 Crie uma nova branch:
-
-bash
-Copiar código
-git checkout -b minha-branch  
+```git checkout -b minha-branch```  
 Faça as alterações necessárias e adicione os commits:
+```git commit -m "Descrição das alterações"```  
 
-bash
-Copiar código
-git commit -m "Descrição das alterações"  
 Envie as alterações para o seu fork:
+```git push origin minha-branch```
 
-bash
-Copiar código
-git push origin minha-branch  
 Abra um pull request neste repositório principal.
