@@ -15,7 +15,7 @@ Front-end: HTML, CSS
 Back-end: Node.js
 Banco de Dados: MySQL
 
-##🖥️ Como Rodar o Projeto
+## 🖥️ Como Rodar o Projeto
 
 Clone o repositório:
 ```git clone https://github.com/seu-usuario/vidas-conectadas.git```
