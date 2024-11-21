@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import iconBack from '../images/botao-voltar.png'
+import { Link, useNavigate } from 'react-router-dom';
 
 function Register() {
   const [nome, setNome] = useState('');
@@ -44,10 +45,10 @@ function Register() {
   return (
     <div className="min-h-screen flex justify-center items-center bg-cor3">
       <form onSubmit={handleSubmit} className="bg-white border border-gray-300 rounded-lg p-8 shadow-lg w-full max-w-sm flex flex-col items-center">
-        
-        <a href="/" id="iconelogin" className="mb-4">
+
+        <Link to='/' className="mb-4">
           <img src={iconBack} alt="Voltar" className="w-10 h-10 mr-72" />
-        </a>
+        </Link>
 
         <h1 className="text-cor1 text-center text-2xl font-semibold mb-6">Cadastro</h1>
 
@@ -104,7 +105,7 @@ function Register() {
             className="w-full p-2 border border-gray-300 rounded-md"
             value={cpf}
             onChange={(e) => setCpf(e.target.value)}
-            maxLength={14} 
+            maxLength={14}
             minLength={14}
           />
         </div>
@@ -152,10 +153,10 @@ function Register() {
           </div>
         </div>
 
-        <a href="/Login">
+        <Link to='/Login'>
           <p id="acesso" className="text-sm text-cor6 hover:text-cor5">Acesse aqui se já for cadastrado</p>
-        </a>
-
+        </Link>
+        
         <div className="w-full flex justify-center mt-6">
           <input
             type="submit"

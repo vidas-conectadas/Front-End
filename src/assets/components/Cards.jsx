@@ -9,8 +9,8 @@ function Cards({ rosa, azul, titulo, texto, icone }) {
 
 
   return (
-    <div className='     border-2 border-cor9 w-48 h-72 gap-2 flex flex-col items-center justify-center rounded-lg laptop:w-64  laptopL:w-72 laptopL:h-96'>
-      <div className={`w-12 h- ${cores} flex items-center justify-center rounded-lg text-2xl laptop:text-3xl`}>
+    <div className='border-2 border-cor9 w-48 h-72 gap-2 flex flex-col items-center justify-center rounded-lg laptop:w-64  laptopL:w-72 laptopL:h-96'>
+      <div className={`w-12 h-12 ${cores} flex items-center justify-center rounded-lg text-2xl laptop:text-3xl`}>
         {icone}
       </div>
       <div className=''>

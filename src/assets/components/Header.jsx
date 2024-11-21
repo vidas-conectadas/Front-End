@@ -12,40 +12,38 @@ function Header() {
 
     useEffect(() => {
         const token = localStorage.getItem('authToken');
-        
+
         if (token) {
             axios.get('http://localhost:5000/api/auth/me', {
                 headers: {
                     Authorization: `Bearer ${token}`,
                 },
             })
-            .then((response) => {
-                setUserName(response.data.nome); 
-            })
-            .catch((error) => {
-                console.error('Erro ao buscar dados do usuário:', error);
-            });
+                .then((response) => {
+                    setUserName(response.data.nome);
+                })
+                .catch((error) => {
+                    console.error('Erro ao buscar dados do usuário:', error);
+                });
         }
     }, []);
 
     const handleLogout = () => {
         localStorage.removeItem('authToken'); // Remover o token JWT
-        setUserName(''); 
-        navigate('/'); 
+        setUserName('');
+        navigate('/');
     };
 
     return (
-        <div className='bg-gradient-to-b from-cor2 to-cor4 h-16 w-full flex items-center justify-between gap-5 pl-2 pr-2 laptop:h-20'>
+        <div className='bg-cor3  h-16 w-full flex items-center justify-between gap-5 pl-2 pr-2 laptop:h-20'>
             <Link to="/">
-            <img src={logo} className='size-12 tablet:size-16' alt="" />
+                <img src={logo} className='size-12 tablet:size-16' alt="" />
             </Link>
-            <nav className='text-cor9 font-semibold text-sm gap-2 flex l:gap-3 l:text-base tablet:text-xl tablet:gap-7 laptop:text-2xl laptop:gap-10 laptopL:text-3xl laptopL:gap-12'>
+            <nav className='text-white font-semibold text-sm flex-wrap justify-around gap-2 flex l:gap-3 l:text-base tablet:text-xl tablet:gap-7 laptop:text-2xl laptop:gap-10 laptopL:text-3xl laptopL:gap-12'>
                 <a href="#onde-doar">Onde doar</a>
-                <a href="/History">Carteirinha de doação</a>
                 <a href="#requisitos">Requisitos</a>
                 <a href="#beneficios">Benefícios</a>
                 <a href="#duvidas">Dúvidas</a>
-
 
             </nav>
             <div className="flex items-center gap-2">
@@ -60,10 +58,11 @@ function Header() {
                         </button>
                     </>
                 ) : (
-                    <a href="/Login">
+                    <Link to='/Login' className=' flex flex-col items-center'>
+                        <img src={user} alt="Ícone de usuário" className='size-6' />
                         <span className="text-black font-semibold">Login</span>
-                        <img src={user} alt="Ícone de usuário" className='size-10 h-10 w-10' />
-                    </a>
+                    </Link>
+                    
                 )}
             </div>
         </div>

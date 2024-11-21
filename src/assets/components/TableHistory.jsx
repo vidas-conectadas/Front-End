@@ -2,7 +2,10 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+
+
+
 
 const TableHistory = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -77,9 +80,9 @@ const TableHistory = () => {
   return (
     <div className="flex flex-col items-center bg-gray min-h-screen p-5">
       <div className="container bg-white rounded-lg drop-shadow-2xl p-6 mt-5 max-w-lg w-full">
-        <a href="/" className="text-cor2">
+        <Link to='/' className="text-cor2">
           <FontAwesomeIcon icon={faArrowLeft} className="text-cor2 text-lg" />
-        </a>
+        </Link>
         <div className="flex justify-between font-bold my-3">
           <p>{userData.nome} {userData.sobrenome}</p>
           <p>{userData.cpf}</p>

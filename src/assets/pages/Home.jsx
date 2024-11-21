@@ -105,7 +105,7 @@ function Home() {
                             <li className='list-disc'>
                                 Estar alimentado. Evitar alimentos gordurosos nas 3 horas que antecedem a doação de sangue. Caso seja após o almoço, aguardar 2 horas.
                             </li>
-                            <li id='beneficios'>
+                            <li id='beneficios' className='text-cor1'>
                                 Para mais informações, ligue (19) 3272-5501 - Hemocentro Mário Gatti
                             </li>
                         </ul>

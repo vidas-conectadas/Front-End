@@ -3,6 +3,7 @@ import Toastify from 'toastify-js';
 import 'toastify-js/src/toastify.css';
 import iconBack from '../images/botao-voltar.png'
 import axios from 'axios';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Login() {
   const [email, setEmail] = useState('');
@@ -30,10 +31,10 @@ function Login() {
         password: password,
       });
 
-      console.log('Token recebido:', response.data.token); 
+      console.log('Token recebido:', response.data.token);
 
 
-      localStorage.setItem('authToken', response.data.token); 
+      localStorage.setItem('authToken', response.data.token);
 
       Toastify({
         text: "Login bem-sucedido!",
@@ -76,9 +77,10 @@ function Login() {
   return (
     <div className="min-h-screen flex justify-center items-center bg-cor3">
       <form onSubmit={handleSubmit} className="bg-white border border-gray-300 rounded-lg p-8 shadow-lg w-full max-w-sm flex flex-col items-center">
-        <a href="/" id="iconelogin" className="mb-4">
+        <Link to='/' className="mb-4">
           <img src={iconBack} alt="Voltar" className="w-10 h-10 mr-72" />
-        </a>
+        </Link>
+
 
         <h1 className="text-cor1 text-center text-2xl font-semibold mb-6">Login</h1>
 
@@ -112,7 +114,9 @@ function Login() {
           />
         </div>
 
-        <a href="/Register" className="text-sm text-cor6 hover:text-cor5 mb-4">Criar conta</a>
+        <Link to='/Register'className="text-sm text-cor6 hover:text-cor5 mb-4">
+          Criar conta
+        </Link>
 
         <div className="w-full flex justify-center mt-6">
           <input

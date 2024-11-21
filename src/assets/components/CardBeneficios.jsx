@@ -2,7 +2,7 @@ import React from 'react'
 
 function CardBeneficios({ foto, titulo, texto }) {
     return (
-        <div className='bg-white w-52 h-[30rem] gap-2 flex flex-col items-center rounded-t-lg rounded-b-lg justify-between laptopL:h-[40rem]'>
+        <div className='border-2 border-cor3 w-52 h-[30rem] gap-2 flex flex-col items-center rounded-t-lg rounded-b-lg justify-between laptopL:h-[40rem]'>
 
             <div className=''>
                 <p className='font-bold text-base text-center text-cor3 laptop:text-lg laptopL:text-2xl'>{titulo}</p>
