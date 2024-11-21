@@ -9,7 +9,7 @@ import Register from './assets/pages/Register'
 function App() {
 
   return (
-    <BrowserRouter basename="/Front-End"> {/* Adicionando o basename */}
+    <BrowserRouter>
       <Routes>
         <Route path='/' element={<Home/>}></Route>
         <Route path='/History' element={<History/>}></Route>
