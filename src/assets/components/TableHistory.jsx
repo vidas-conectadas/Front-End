@@ -3,12 +3,17 @@ import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import { Link, useNavigate } from 'react-router-dom';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import { faEdit } from '@fortawesome/free-solid-svg-icons';
 
 
 
 
 const TableHistory = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalEditOpen, setIsModalEditOpen] = useState(false);
+  // const [editMode, setEditMode] = useState(false);
+  const [editDonationId, setEditDonationId] = useState(null);
   const [data, setData] = useState('');
   const [local, setLocal] = useState('');
   const [historicos, setHistoricos] = useState([]);
@@ -19,8 +24,25 @@ const TableHistory = () => {
 
   const navigate = useNavigate();
 
+  const closeModalEdit = () => {
+     setIsModalEditOpen(false);
+    //  setEditMode(false);
+     setEditDonationId(null);
+     setData('');
+     setLocal('');
+    };
+
   const closeModal = () => setIsModalOpen(false);
+
   const openModal = () => setIsModalOpen(true);
+
+  const openModalEdit = (donation = null) => {
+    setIsModalEditOpen(true);
+    // setEditMode(true);
+    setEditDonationId(donation.id);
+    setData(donation.data_doacao.split('T')[0]);
+    setLocal(donation.local);
+  };
 
   const token = localStorage.getItem('authToken');
 
@@ -61,13 +83,13 @@ const TableHistory = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(
-        'http://localhost:5000/api/auth/donations',
-        { data_doacao: data, local },
-        { headers: { Authorization: `Bearer ${token}` } }
-      );
+      const response = await axios.post('http://localhost:5000/api/auth/donations', 
+        { data_doacao: data, local }, {
+        headers: { Authorization: `Bearer ${token}` },
+      });
 
-      if (response.status === 201) {
+
+      if (response.status === 200 || response.status === 201) {
         setPage(1);
         fetchHistoricos(1);
         closeModal();
@@ -77,8 +99,41 @@ const TableHistory = () => {
     }
   };
 
+  const handleEdit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.put(`http://localhost:5000/api/auth/donations/${editDonationId}`, { data_doacao: data, local }, {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+
+
+      if (response.status === 200 || response.status === 201) {
+        setPage(1);
+        fetchHistoricos(1);
+        closeModalEdit();
+      }
+    } catch (error) {
+      console.error('Erro ao editar doação:', error);
+    }
+  };
+
+  const handleDelete = async () => {
+    try {
+      const response = await axios.delete(`http://localhost:5000/api/auth/donations/${editDonationId}`, {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+
+      if (response.status === 200) {
+        fetchHistoricos(page);
+        closeModalEdit();
+      }
+    } catch (error) {
+      console.error('Erro ao deletar doação:', error);
+    }
+  };
+
   return (
-    <div className="flex flex-col items-center bg-gray min-h-screen p-5">
+    <div className="flex flex-col items-center justify-center bg-gray min-h-screen p-5">
       <div className="container bg-white rounded-lg drop-shadow-2xl p-6 mt-5 max-w-lg w-full">
         <Link to='/' className="text-cor2">
           <FontAwesomeIcon icon={faArrowLeft} className="text-cor2 text-lg" />
@@ -94,6 +149,7 @@ const TableHistory = () => {
               <th className="border-b p-2 text-left">Data da Doação</th>
               <th className="border-b p-2 text-left">Local da Doação</th>
               <th className="border-b p-2 text-left">Próxima Doação</th>
+              <th className="border-b p-2 text-center">Ações</th>
             </tr>
           </thead>
           <tbody>
@@ -101,7 +157,7 @@ const TableHistory = () => {
               const dataDoacao = new Date(historico.data_doacao);
               const anoDoacao = dataDoacao.getFullYear();
               const mesDoacao = String(dataDoacao.getMonth() + 1).padStart(2, '0');
-              const diaDoacao = String(dataDoacao.getDate()).padStart(2, '0');
+              const diaDoacao = String(dataDoacao.getDate() + 1).padStart(2, '0');
               const dataDoacaoFormatada = `${diaDoacao}-${mesDoacao}-${anoDoacao}`;
 
               const dataProximaDoacao = new Date(historico.next_donation);
@@ -115,6 +171,11 @@ const TableHistory = () => {
                   <td className="border-b p-2">{dataDoacaoFormatada}</td>
                   <td className="border-b p-2">{historico.local}</td>
                   <td className="border-b p-2">{dataApto}</td>
+                  <td className="border-b p-2 text-center">
+                    <button onClick={() => openModalEdit(historico)} className="text-blue-500 mx-2">
+                      <FontAwesomeIcon icon={faEdit} />
+                    </button>
+                  </td>
                 </tr>
               );
             })}
@@ -184,12 +245,58 @@ const TableHistory = () => {
                 className="block w-full border-2 border-cor1 p-2 rounded mb-4"
                 required
               />
+              <div className="flex justify-between">
+                  <button type="submit" className="bg-cor1 text-white py-2 px-4 rounded">Cadastrar</button>
 
-              <button type="submit" className="bg-cor1 text-white w-full py-2 rounded">Cadastrar</button>
+              </div>
             </form>
           </div>
         </div>
       )}
+
+      {isModalEditOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-40">
+          <div className="bg-white rounded-lg shadow-lg p-5 max-w-md w-full relative">
+            <button onClick={closeModalEdit} className="absolute top-2 right-2 text-gray-400 hover:text-gray-600">
+              &times;
+            </button>
+            <h2 className="text-2xl font-bold mb-4">Editar doação</h2>
+            <form onSubmit={handleEdit}>
+              <label htmlFor="date" className="block mb-2">Data da doação:</label>
+              <input
+                type="date"
+                id="date"
+                name="date"
+                value={data}
+                onChange={(e) => setData(e.target.value)}
+                className="block w-full border-2 border-cor1 p-2 rounded mb-4"
+                required
+              />
+
+              <label htmlFor="local" className="block mb-2">Local:</label>
+              <input
+                type="text"
+                id="local"
+                name="local"
+                placeholder="Mario Gatti"
+                value={local}
+                onChange={(e) => setLocal(e.target.value)}
+                className="block w-full border-2 border-cor1 p-2 rounded mb-4"
+                required
+              />
+
+              <div className="flex justify-between">
+                  <button type="submit" className="bg-cor1 text-white py-2 px-4 rounded">Salvar alterações</button>
+                  <button onClick={handleDelete} type="button" className="bg-red-500 text-cor5 py-2 px-4 rounded">
+                    <FontAwesomeIcon icon={faTrash} /> Excluir
+                  </button>
+                  
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
+
     </div>
   );
 };

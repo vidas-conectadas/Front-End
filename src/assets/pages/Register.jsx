@@ -105,8 +105,8 @@ function Register() {
             className="w-full p-2 border border-gray-300 rounded-md"
             value={cpf}
             onChange={(e) => setCpf(e.target.value)}
-            maxLength={14}
-            minLength={14}
+            maxLength={11}
+            minLength={11}
           />
         </div>
 

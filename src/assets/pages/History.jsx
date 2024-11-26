@@ -8,9 +8,9 @@ const History = () => {
   return (
     <div>
 
-    <Header/>
+
     <TableHistory/>
-    <Footer />
+
     
     </div>
   )
