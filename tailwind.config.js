@@ -33,11 +33,6 @@ export default {
       // => @media (min-width: 600px) { ... }
     },
 
-    
-
-    backgroundImage: {
-      'Vermelho':"url('C:/Users/vai2ca/Desktop/vidas conectadas/src/assets/images/imgBeneficios.jpg')"
-    },
   },
   plugins: [],
 }

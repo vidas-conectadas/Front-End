@@ -36,7 +36,7 @@ function Header() {
     };
 
     return (
-        <div className='bg-cor3  h-16 w-full flex fixed items-center justify-between gap-5 pl-2 pr-2 laptop:h-20'>
+        <div className='bg-gradient-to-t from-cor4 to-cor2 h-16 w-full flex fixed items-center justify-between gap-5 pl-2 pr-2 laptop:h-20'>
             <Link to="/">
                 <img src={logo} className='size-12 tablet:size-16' alt="" />
             </Link>
