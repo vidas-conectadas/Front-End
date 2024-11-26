@@ -1,18 +1,18 @@
-import React from 'react'
+// import React from 'react'
 import Header from '../components/Header'
 import Title from '../components/Title'
 import Footer from '../components/Footer'
 import imagemRequisitos from '../images/imgRequisitos.jpg'
 import Cards from '../components/Cards'
 import CardBeneficios from '../components/CardBeneficios'
-import { FaShieldHeart } from "react-icons/fa6";
-import group13 from '../images/Group 13.jpg'
+// import { FaShieldHeart } from "react-icons/fa6";
+// import group13 from '../images/Group 13.jpg'
 import imagem from '../images/image_principal.jpg'
 import evento1 from '../images/imagem_evento 1.jpg'
 import carteira from '../images/carteira-trabalho.jpg'
 import concurso from '../images/concurso.jpg'
 import fila from '../images/fila.jpg'
-import Mapa from '../components/Mapa'
+// import Mapa from '../components/Mapa'
 import Locais from '../components/Locais'
 import { FaHeartCircleCheck } from "react-icons/fa6";
 import { PiListChecksFill } from "react-icons/pi";
@@ -95,19 +95,19 @@ function Home() {
                                 Ter idade entre 16 e 69 anos, (menores de 18 anos devem apresentar consentimento formal do responsável legal);
                             </li>
                             <li className='list-disc'>
-                                Pessoas com idade entre 60 e 69 anos só poderão doar sangue se já o tiverem feito antes dos 60 anos.
+                                Pessoas com idade entre 60 e 69 anos só poderão doar sangue se já o tiverem feito antes dos 60 anos.
                             </li>
                             <li className='list-disc'>
-                                Apresentar documento de identificação com foto emitido por órgão oficial (Carteira de Identidade, Carteira Nacional de Habilitação, Carteira de Trabalho, Passaporte, Registro Nacional de Estrangeiro, Certificado de Reservista e Carteira Profissional emitida por classe). São aceitos documentos digitais com foto.
+                                Apresentar documento de identificação com foto emitido por órgão oficial (Carteira de Identidade, Carteira Nacional de Habilitação, Carteira de Trabalho, Passaporte, Registro Nacional de Estrangeiro, Certificado de Reservista e Carteira Profissional emitida por classe). São aceitos documentos digitais com foto.
                             </li>
                             <li className='list-disc'>
                                 Pesar no mínimo 50 kg.
                             </li>
                             <li className='list-disc'>
-                                Ter dormido pelo menos 6 horas nas últimas 24 horas.
+                                Ter dormido pelo menos 6 horas nas últimas 24 horas.
                             </li>
                             <li className='list-disc'>
-                                Estar alimentado. Evitar alimentos gordurosos nas 3 horas que antecedem a doação de sangue. Caso seja após o almoço, aguardar 2 horas.
+                                Estar alimentado. Evitar alimentos gordurosos nas 3 horas que antecedem a doação de sangue. Caso seja após o almoço, aguardar 2 horas.
                             </li>
                             <li id='beneficios' className='text-cor1'>
                                 Para mais informações, ligue (19) 3272-5501 - Hemocentro Mário Gatti

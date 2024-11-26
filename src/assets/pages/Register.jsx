@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import iconBack from '../images/botao-voltar.png'
 import { Link, useNavigate } from 'react-router-dom';
+import Toastify from 'toastify-js';
+import 'toastify-js/src/toastify.css';
 
 function Register() {
   const [nome, setNome] = useState('');
@@ -31,8 +33,22 @@ function Register() {
       });
 
       if (response.status === 201) {
-        alert(response.data.message);
+        Toastify({
+          text: "Cadastro bem-sucedido!",
+          duration: 3000,
+          close: true,
+          gravity: "top",
+          position: "right",
+          backgroundColor: "green",
+          stopOnFocus: true
+        }).showToast();
+  
+        setTimeout(() => {
+          window.location.href = "/Login";
+        }, 3000);
+        
       }
+
     } catch (error) {
       if (error.response) {
         alert(error.response.data.message);
@@ -46,7 +62,7 @@ function Register() {
     <div className="min-h-screen flex justify-center items-center bg-cor3">
       <form onSubmit={handleSubmit} className="bg-white border border-gray-300 rounded-lg p-8 shadow-lg w-full max-w-sm flex flex-col items-center">
 
-        <Link to='/' className="mb-4">
+        <Link to='/Login' className="mb-4">
           <img src={iconBack} alt="Voltar" className="w-10 h-10 mr-72" />
         </Link>
 
